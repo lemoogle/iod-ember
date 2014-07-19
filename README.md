@@ -20,6 +20,11 @@ For more information on using ember-cli, visit [http://iamstef.net/ember-cli/](h
 ## Configuration
 
 Edit `app/models/iodadapter.js` to set your apikey and other configuration parameters.
+
+* Apikey : set this to your apikey . Register on http://idolondemand.com to get one
+
+The below values have defaults that will point to the public news dataset of IDOL OnDemand but will need to be changed once you point the application to one of your public datasets.
+
 * Apiurl : Make sure this is set to "http://api.idolondemand.com"
 * Apiindex : Make sure this is set to the index you want to query. If you don't have an index yet, try news-eng
 * parametric_field : Beta Feature - Currently only the category field is supported for custom indexes
