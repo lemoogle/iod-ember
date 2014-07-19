@@ -1,0 +1,71 @@
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-sm-3 col-md-2 sidebar">
+
+            <h2> Recent Searches</h2>
+                            <ul class="nav nav-sidebar" id="cluster-nav">
+
+            {{#each recentsearches}}
+
+                <li>
+                    <a href="#" title="view again" {{action "searchAgain" this target="controller.recentsearches"}}>{{this}}</a>
+                </li>
+            {{/each}}
+                </ul>
+
+                <h2>Clusters</h2>
+                <ul class="nav nav-sidebar" id="cluster-nav">
+
+{{each clusters itemView="Cluster"}}
+                </ul>
+
+
+            <h2> Facets</h2>
+
+<div class="tree">
+    <ul>
+
+
+        <li>
+            <span><i class="icon-folder-open"></i>{{facets.field_name}}</span><a href="#" {{ action 'facetsearch' "reset" }}>Reset</a>
+            <ul>
+            {{each facets itemView="Facet"}}
+            </ul>
+        </li>
+    </ul>
+</div>
+
+
+            </div>
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">   
+                <h1 class="page-header">Tools</h1>
+
+                <div id="result-main">
+                <button type="button" {{action "sentimentAll"  target="results" }} class="btn-sentiment btn btn-sm btn-primary">Sentiment Analysis</button>
+
+                <div class="btn-group">
+                    <button type="button" class="btn btn-sm dropdown-toggle" data-toggle="dropdown">
+                        Entity Extraction
+                        <span class="caret"></span>
+                    </button>
+
+                    <ul class="dropdown-menu" role="menu">
+
+                        {{#each  controllers.application.entitiesdefault }}
+                        <li><a href="#" {{ action "loadentities" this target="controller.results"}}>{{display}}</a></li>
+
+                        {{/each}}
+                    </ul> 
+                </div>
+
+                <h1 class="page-header">Results</h1>
+
+
+{{each results itemView="result"}}
+                </div>
+            </div>
+        </div>
+    </div>    
+    

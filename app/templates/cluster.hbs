@@ -1,0 +1,9 @@
+
+                    <a data-toggle="collapse" href="#subcluster-{{unbound _view.contentIndex}}"><span class="badge pull-right">{{totaldocs}}</span>{{docs.firstObject.text}}</a>
+                    <div id="subcluster-{{unbound _view.contentIndex}}" class="panel-collapse subnav collapse" >
+                    <ul>
+                    {{#each docs}}
+                      <li><a href="#" {{ action 'clustersearch' text }}><span class="badge pull-right">{{docs_with_phrase}}</span>{{text}}</a></li>
+                    {{/each}}
+                    </ul>
+                    </div>

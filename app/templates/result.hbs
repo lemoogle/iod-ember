@@ -1,0 +1,59 @@
+
+    <div class="row result-element">
+        <div class="col-md-1">{{unbound _view.pos}}</div>
+
+        <div class="col-md-11">
+            <div class="row">
+                <div class="col-md-12 title">
+                    {{#link-to "document" this.encodedRef }}{{title}}{{/link-to}}
+                </div>
+                <div class="col-md-12 content">
+                 {{{summary}}}
+                </div>  
+                {{#if sentimentvalue}}
+                <div class="col-md-12 content">
+                Sentiment: {{sentimentvalue.aggregate.sentiment}}
+                </div>
+                {{/if}}
+
+                {{#each entitiescontroller}}
+
+                <div class="col-md-12 content">
+                Entities - {{display}} : {{returnedEntities}}
+                </div>
+
+                {{/each}}
+
+
+                {{#each extractedentities}}
+                {{#if returnedEntities}}
+                <div class="col-md-12 content">
+                Entities - {{display}} : {{returnedEntities}}
+                </div>
+                {{/if}}
+                {{/each}}
+
+
+                <div style="display:none" class="col-md-12 extra-content">
+                 
+                </div>
+                <div class="col-md-12 btn-iod">
+                    <button type="button" {{action "sentiment" }} class="btn-sentiment btn btn-sm btn-primary">Sentiment Analysis</button>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sm dropdown-toggle" data-toggle="dropdown">
+                            Entity Extraction
+                            <span class="caret"></span>
+                        </button>
+
+                        <ul class="dropdown-menu" role="menu">
+
+                            {{#each extractedentities itemController="entity"}}
+                            <li><a href="#" {{ action "entity" target="controller"}}>{{display}}</a></li>
+
+                            {{/each}}
+                        </ul> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,23 @@
+.highlight {
+    background-color: #FFFF88;
+}
+
+
+.highlight.people_eng{
+    background-color: orange;
+}
+
+
+.highlight.places_eng{
+    background-color: yellow;
+}
+
+
+.highlight.positive{
+    background-color: green;
+}
+
+
+.highlight.negative{
+    background-color: red;
+}

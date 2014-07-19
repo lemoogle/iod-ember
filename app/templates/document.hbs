@@ -1,0 +1,56 @@
+
+    <div class="container-fluid full">
+        <div class="row full">
+
+            <div class="col-sm-3 col-md-4 sidebar">
+                <h1 class="page-header">Tools</h1>
+
+                <div id="result-main">
+                <button type="button" {{action "sentiment" target="controller"}} class="btn-sentiment btn btn-sm btn-primary">Sentiment Analysis</button>
+
+                <div class="btn-group">
+                    <button type="button" class="btn btn-sm dropdown-toggle" data-toggle="dropdown">
+                        Entity Extraction
+                        <span class="caret"></span>
+                    </button>
+                        <ul class="dropdown-menu" role="menu">
+
+                            {{#each controllers.application.entitiesdefault}}
+                            <li><a href="#" {{ action "entity" this target="controller"}}>{{display}}</a></li>
+                            {{/each}}
+                        </ul> 
+                </div>
+
+                <div>
+                    <span> Highlight </span>
+             {{view 'highlight' placeholder="highlight" valueBinding="controller.highlighttext"}}
+                </div>
+            </div>
+
+            </div>
+
+            <div class="col-sm-9 col-sm-offset-3 col-md-8 col-md-offset-4 main full"> 
+
+
+               {{#if this.islink }}
+
+              {{view 'iframe' controllerBinding="this" }}
+
+              {{else}}
+
+     		  <h1>{{title}}</h1>
+
+     		   {{#each customfields}}
+
+
+     		  <h2><strong>{{name}} :</strong> {{value}}</h2>
+            {{/each}}
+
+            <div class="jumbotron">
+              {{{content_html}}}
+             </div>
+              {{/if}}
+                        </div>
+
+        </div>
+    </div>  
