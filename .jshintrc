@@ -5,7 +5,7 @@
     "document": true,
     "window": true,
     "conf":"true",
-    "IodENV": true
+    "IodEmberENV": true
   },
   "browser" : true,
   "boss" : true,
