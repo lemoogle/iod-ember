@@ -1,10 +1,10 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
-/dist
+#/dist
 /tmp
 
-/app/models/myiodadapter.js
+/app/models/myiodadapter.js.withkey
 
 # dependencies
 /node_modules

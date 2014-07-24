@@ -1,8 +1,8 @@
-import IODAdapter from "../models/IODAdapter";
+import IODAdapter from "../models/iodadapter";
 
 
 export default {
-  name: "IODAdapter",
+  name: "iodadapter",
 
   initialize: function(container, application) {
     container.typeInjection('component', 'store', 'store:main');
