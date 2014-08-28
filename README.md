@@ -44,5 +44,5 @@ The below values have defaults that will point to the public news dataset of IDO
 ## Building
 
 * `ember build`
-This will put the files required to run on a separate server in the dist folder
+This will put the files required in the dist folder
 
