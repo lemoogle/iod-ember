@@ -90,7 +90,7 @@ default Ember.ArrayController.extend({
         var params = {
             'text': search.text,
             'field_text': search.facets,
-            'max_results': 100,
+            'sample_size': 1000,
         };
         this.get('iodadapter').call('findrelatedconcepts', params, this.get('callbacks.load')(self,waiting));
 

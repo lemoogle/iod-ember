@@ -13,12 +13,13 @@ default Ember.ObjectController.extend({
     facets: null,
     recentsearches: null,
     currentfacet: "",
+
     needs: "application",
 
     actions: {
 
         clustersearch: function(e) {
-            var query = this.get('controllers.application.text') + " AND " + '"' + e + '"';
+            var query = "("+this.get('controllers.application.text') + ") AND " + '"' + e + '"';
             this.transitionToRoute('search', {
                 query: query,
             });

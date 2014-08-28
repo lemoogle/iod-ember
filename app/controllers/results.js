@@ -42,7 +42,8 @@ export default Ember.ArrayController.extend({
         var data={
             'text': search.text,
             'field_text': search.facets,
-            'summary': 'quick',
+            'summary': 'context',
+            'highlight': 'summary_terms',
                 'print':'all'};
 
         var callback= function(response) {

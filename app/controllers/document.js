@@ -16,6 +16,7 @@ default Ember.ObjectController.extend({
     o_cleancontent: '',
     o_content: '',
     jquery_content: '',
+    similardocs:[],
     sentimentvalue: null,
     entities: [],
     needs: ['application'],
@@ -243,6 +244,31 @@ default Ember.ObjectController.extend({
             };
 
             this.get('iodadapter').call('getcontent', data, callback);
+
+            data = {
+                'index_reference': unescape(this.get('reference')),
+               // 'print': 'all',
+                'summary':'quick',
+            };
+            callback = function(response) {
+
+                
+                var similardocs=[];
+                similardocs=response["documents"];
+                self.set('similardocs', similardocs);
+                self.propertyDidChange('similardocs');
+                /* WITH HTML CONTENT STUFF
+                // this is if there is a fied 
+                content.append(response["documents"][0]["htmlcontent"])
+                self.set('cleancontent',response["documents"][0]["content"])
+                self.set('o_cleancontent',response["documents"][0]["content"])
+                self.set('content',content)
+                self.set('o_content',content)
+                self.set('data',response["documents"][0])
+                */
+            };
+
+            this.get('iodadapter').call('findsimilar', data, callback);
 
         } else {
             // this else case if for the iframe stuff but this will be reengineered. 

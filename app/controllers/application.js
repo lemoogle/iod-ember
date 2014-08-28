@@ -24,6 +24,7 @@ export default Ember.ObjectController.extend({
         query: function() {
             this.transitionToRoute('search', {
                 query: this.get('text'),
+              //  page:1,
             });
         },
 

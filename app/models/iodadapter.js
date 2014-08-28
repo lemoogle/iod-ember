@@ -2,14 +2,20 @@ import Ember from "ember";
 
 export
 default Ember.Object.extend({
-    apikey: "yourapikeyhere",
+    apikey: "apikey",
     apiurl: "https://api.idolondemand.com",
     // The index we created and indexed into
     apiindex: "news_eng",
 
     parametric_field: "rss_category",
     // Fields we'll want to display in individual document results
-    printfields: ["Category", "Author", "rss_category"],
+    
+
+
+   printfields: ["rss_category"],
+
+  //comic_series
+  //  printfields: ["created_by_name", "publisher_name", "featured_characters_name"],
 
 
     call: function(handler, data, callback) {

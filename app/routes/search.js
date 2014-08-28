@@ -11,8 +11,9 @@ var SearchRoute = Ember.Route.extend({
     setupController: function(controller, model) {
 
         controller.set("controllers.application.text", model.query);
+
         //console.log(model)
-        
+       // controller.set('page',parseInt(model.page));
         var results = this.controllerFor('results');
         var clusters = this.controllerFor('clusters');
         var facets = this.controllerFor('facets');
@@ -27,6 +28,7 @@ var SearchRoute = Ember.Route.extend({
         controller.send('search');
         
     },
+
 
 
 });

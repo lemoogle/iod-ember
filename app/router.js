@@ -11,8 +11,9 @@ Router.map(function() {
         'path': 'document/:reference'
     });
 
-    this.route('search', {
-        'path': 'search/:query'
+    this.resource('search', {
+        'path': 'search/:query',
+
     });
 
     
