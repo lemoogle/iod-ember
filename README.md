@@ -13,7 +13,6 @@ Any best practice advice is very welcome and do not hesitate to branch/contribut
 This application requires ember-cli to be run and built.
 For more information on using ember-cli, visit [http://iamstef.net/ember-cli/](http://iamstef.net/ember-cli/).
 
-* `npm install -g ember-cli` . This will install the ember-cli tool
 * `npm install -g bower` . this will intall the bower package manager.
 * `git clone http://github.com/lemoogle/iod-ember`
 * `cd iod-ember`
