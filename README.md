@@ -17,7 +17,6 @@ For more information on using ember-cli, visit [http://iamstef.net/ember-cli/](h
 * `npm install -g bower` . this will intall the bower package manager.
 * `git clone http://github.com/lemoogle/iod-ember`
 * `cd iod-ember`
-* `bower install`
 * `npm install`
 * `bower install`
 The bower install will create and populate the vendor directories with the various JS and CSS libraries required.
