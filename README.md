@@ -40,15 +40,9 @@ The below values have defaults that will point to the public news dataset of IDO
 * `ember server`
 * Visit your app at http://localhost:4200.
 
-## Running Tests
-
-**Note:** no current tests.
-
-* `ember test`
-* `ember test --server`
 
 ## Building
 
 * `ember build`
-This will put the files required in dist.js
+This will put the files required to run on a separate server in the dist folder
 
