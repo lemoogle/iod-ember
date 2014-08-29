@@ -20,6 +20,15 @@ For more information on using ember-cli, visit [http://iamstef.net/ember-cli/](h
 * `bower install`
 The bower install will create and populate the vendor directories with the various JS and CSS libraries required.
 
+## Running
+
+* `npm start run`
+* or `.\node_modules\.bin\ember server`
+* Visit your app at http://localhost:4200.
+
+You can also install ember-cli globally and just run 
+* `npm install -g ember-cli` . This will install the ember-cli tool globally
+* `ember server` 
 
 ## Configuration
 
@@ -34,14 +43,8 @@ The below values have defaults that will point to the public news dataset of IDO
 * parametric_field : Beta Feature - Currently only the category field is supported for custom indexes
 * printfields : Beta Feature - The fields that will diplay in the document view
 
-## Running
-
-* `ember server`
-* Visit your app at http://localhost:4200.
-
-
 ## Building
 
 * `ember build`
-This will put the files required in the dist folder
+This will put the files required in the dist folder to run on your own server.
 
