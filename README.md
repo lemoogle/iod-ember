@@ -7,7 +7,6 @@ As an example for this, all the data being loaded from idol ondemand does not us
 
 Any best practice advice is very welcome and do not hesitate to branch/contribute.
 
-
 ## Installation
 
 This application requires ember-cli to be run and built.
