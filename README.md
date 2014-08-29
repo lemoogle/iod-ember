@@ -9,8 +9,9 @@ Any best practice advice is very welcome and do not hesitate to branch/contribut
 
 ## Installation
 
-This application requires ember-cli to be run and built.
-For more information on using ember-cli, visit [http://iamstef.net/ember-cli/](http://iamstef.net/ember-cli/).
+**Prerequisites:**
+* NPM package manager, you can install this by installing node on the platform of your choice. http://nodejs.org/download/
+
 
 * `npm install -g bower` . this will intall the bower package manager.
 * `git clone http://github.com/lemoogle/iod-ember`
