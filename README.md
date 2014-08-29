@@ -12,7 +12,7 @@ Any best practice advice is very welcome and do not hesitate to branch/contribut
 **Prerequisites:**
 * NPM package manager, you can install this by installing node on the platform of your choice. http://nodejs.org/download/
 
-
+**Installation**
 * `npm install -g bower` . this will intall the bower package manager.
 * `git clone http://github.com/lemoogle/iod-ember`
 * `cd iod-ember`
