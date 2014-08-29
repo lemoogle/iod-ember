@@ -9,7 +9,7 @@ Any best practice advice is very welcome and do not hesitate to branch/contribut
 
 ## Installation
 
-**Prerequisites:**
+**NPM**
 * NPM package manager, you can install this by installing node on the platform of your choice. http://nodejs.org/download/
 
 **Installation**
