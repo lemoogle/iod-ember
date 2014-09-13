@@ -7,13 +7,12 @@ As an example for this, all the data being loaded from idol ondemand does not us
 
 Any best practice advice is very welcome and do not hesitate to branch/contribute.
 
-
 ## Installation
 
-This application requires ember-cli to be run and built.
-For more information on using ember-cli, visit [http://iamstef.net/ember-cli/](http://iamstef.net/ember-cli/).
+**NPM**
+* NPM package manager, you can install this by installing node on the platform of your choice. http://nodejs.org/download/
 
-* `npm install -g ember-cli` . This will install the ember-cli tool
+**Installation**
 * `npm install -g bower` . this will intall the bower package manager.
 * `git clone http://github.com/lemoogle/iod-ember`
 * `cd iod-ember`
@@ -21,6 +20,15 @@ For more information on using ember-cli, visit [http://iamstef.net/ember-cli/](h
 * `bower install`
 The bower install will create and populate the vendor directories with the various JS and CSS libraries required.
 
+## Running
+
+* `npm start run`
+* or `.\node_modules\.bin\ember server`
+* Visit your app at http://localhost:4200.
+
+You can also install ember-cli globally and just run 
+* `npm install -g ember-cli` . This will install the ember-cli tool globally
+* `ember server` 
 
 ## Configuration
 
@@ -35,14 +43,8 @@ The below values have defaults that will point to the public news dataset of IDO
 * parametric_field : Beta Feature - Currently only the category field is supported for custom indexes
 * printfields : Beta Feature - The fields that will diplay in the document view
 
-## Running
-
-* `ember server`
-* Visit your app at http://localhost:4200.
-
-
 ## Building
 
 * `ember build`
-This will put the files required to run on a separate server in the dist folder
+This will put the files required in the dist folder to run on your own server.
 
